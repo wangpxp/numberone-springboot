@@ -16,8 +16,7 @@ import com.numberone.framework.datasource.DynamicDataSource;
 
 /**
  * druid 配置多数据源
- * 
- * @author numberone
+ *
  */
 @Configuration
 public class DruidConfig
