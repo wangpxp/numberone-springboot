@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50728
 File Encoding         : 65001
 
-Date: 2019-12-22 13:39:49
+Date: 2019-12-24 12:59:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -161,7 +161,7 @@ CREATE TABLE `qrtz_scheduler_state` (
 -- ----------------------------
 -- Records of qrtz_scheduler_state
 -- ----------------------------
-INSERT INTO `qrtz_scheduler_state` VALUES ('NumberOneScheduler', 'DESKTOP-NPGVG701576991766693', '1576993180569', '15000');
+INSERT INTO `qrtz_scheduler_state` VALUES ('NumberOneScheduler', 'DESKTOP-NPGVG701577163321945', '1577163579920', '15000');
 
 -- ----------------------------
 -- Table structure for qrtz_simple_triggers
@@ -420,7 +420,7 @@ CREATE TABLE `sys_logininfor` (
   `msg` varchar(255) DEFAULT '' COMMENT '提示消息',
   `login_time` datetime DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`info_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8 COMMENT='系统访问记录';
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -442,6 +442,7 @@ INSERT INTO `sys_logininfor` VALUES ('113', 'net', '127.0.0.1', '内网IP', 'Chr
 INSERT INTO `sys_logininfor` VALUES ('114', 'netw', '127.0.0.1', '内网IP', 'Chrome', 'Windows 10', '1', '验证码错误', '2019-12-22 13:34:45');
 INSERT INTO `sys_logininfor` VALUES ('115', 'netw', '127.0.0.1', '内网IP', 'Chrome', 'Windows 10', '1', '验证码错误', '2019-12-22 13:34:47');
 INSERT INTO `sys_logininfor` VALUES ('116', 'netw', '127.0.0.1', '内网IP', 'Chrome', 'Windows 10', '0', '登录成功', '2019-12-22 13:34:50');
+INSERT INTO `sys_logininfor` VALUES ('117', 'admin', '127.0.0.1', '内网IP', 'Chrome', 'Windows 10', '0', '登录成功', '2019-12-24 12:55:39');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -506,11 +507,6 @@ INSERT INTO `sys_menu` VALUES ('1021', '岗位新增', '104', '2', '#', 'F', '0'
 INSERT INTO `sys_menu` VALUES ('1022', '岗位修改', '104', '3', '#', 'F', '0', 'system:post:edit', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1023', '岗位删除', '104', '4', '#', 'F', '0', 'system:post:remove', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1024', '岗位导出', '104', '5', '#', 'F', '0', 'system:post:export', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1025', '字典查询', '105', '1', '#', 'F', '0', 'system:dict:list', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1026', '字典新增', '105', '2', '#', 'F', '0', 'system:dict:add', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1027', '字典修改', '105', '3', '#', 'F', '0', 'system:dict:edit', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1028', '字典删除', '105', '4', '#', 'F', '0', 'system:dict:remove', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1029', '字典导出', '105', '5', '#', 'F', '0', 'system:dict:export', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1030', '参数查询', '106', '1', '#', 'F', '0', 'system:config:list', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1031', '参数新增', '106', '2', '#', 'F', '0', 'system:config:add', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1032', '参数修改', '106', '3', '#', 'F', '0', 'system:config:edit', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
@@ -530,15 +526,6 @@ INSERT INTO `sys_menu` VALUES ('1045', '日志导出', '501', '3', '#', 'F', '0'
 INSERT INTO `sys_menu` VALUES ('1046', '在线查询', '109', '1', '#', 'F', '0', 'monitor:online:list', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1047', '批量强退', '109', '2', '#', 'F', '0', 'monitor:online:batchForceLogout', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 INSERT INTO `sys_menu` VALUES ('1048', '单条强退', '109', '3', '#', 'F', '0', 'monitor:online:forceLogout', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1049', '任务查询', '110', '1', '#', 'F', '0', 'monitor:job:list', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1050', '任务新增', '110', '2', '#', 'F', '0', 'monitor:job:add', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1051', '任务修改', '110', '3', '#', 'F', '0', 'monitor:job:edit', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1052', '任务删除', '110', '4', '#', 'F', '0', 'monitor:job:remove', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1053', '状态修改', '110', '5', '#', 'F', '0', 'monitor:job:changeStatus', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1054', '任务详细', '110', '6', '#', 'F', '0', 'monitor:job:detail', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1055', '任务导出', '110', '7', '#', 'F', '0', 'monitor:job:export', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1056', '生成查询', '114', '1', '#', 'F', '0', 'tool:gen:list', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
-INSERT INTO `sys_menu` VALUES ('1057', '生成代码', '114', '2', '#', 'F', '0', 'tool:gen:code', '#', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '');
 
 -- ----------------------------
 -- Table structure for sys_notice
@@ -583,7 +570,7 @@ CREATE TABLE `sys_oper_log` (
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`oper_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COMMENT='操作日志记录';
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -603,6 +590,7 @@ INSERT INTO `sys_oper_log` VALUES ('111', '定时任务', '2', 'com.numberone.we
 INSERT INTO `sys_oper_log` VALUES ('112', '定时任务', '2', 'com.numberone.web.controller.monitor.SysJobController.changeStatus()', '1', 'admin', '研发部门', '/monitor/job/changeStatus', '127.0.0.1', '内网IP', '{\r\n  \"jobId\" : [ \"1\" ],\r\n  \"status\" : [ \"1\" ]\r\n}', '0', null, '2019-12-22 13:20:07');
 INSERT INTO `sys_oper_log` VALUES ('113', '用户管理', '3', 'com.numberone.web.controller.system.SysUserController.remove()', '1', 'admin', '研发部门', '/system/user/remove', '127.0.0.1', '内网IP', '{\r\n  \"ids\" : [ \"2\" ]\r\n}', '0', null, '2019-12-22 13:33:33');
 INSERT INTO `sys_oper_log` VALUES ('114', '通知公告', '2', 'com.numberone.web.controller.system.SysNoticeController.editSave()', '1', 'netw', '测试部门', '/system/notice/edit', '127.0.0.1', '内网IP', '{\r\n  \"noticeId\" : [ \"1\" ],\r\n  \"noticeTitle\" : [ \"温馨提醒：2019-11-26 NumberOne新版本发布啦\" ],\r\n  \"noticeType\" : [ \"2\" ],\r\n  \"noticeContent\" : [ \"新版本内容22\" ],\r\n  \"status\" : [ \"0\" ]\r\n}', '0', null, '2019-12-22 13:35:26');
+INSERT INTO `sys_oper_log` VALUES ('115', '菜单管理', '3', 'com.numberone.web.controller.system.SysMenuController.remove()', '1', 'admin', '研发部门', '/system/menu/remove/1028', '127.0.0.1', '内网IP', '{ }', '0', null, '2019-12-24 12:56:04');
 
 -- ----------------------------
 -- Table structure for sys_post
@@ -797,7 +785,7 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', '103', 'admin', 'NumberOne', '00', 'ry@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2019-12-22 13:16:20', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-22 13:16:19', '管理员');
+INSERT INTO `sys_user` VALUES ('1', '103', 'admin', 'NumberOne', '00', 'ry@163.com', '15888888888', '1', '', '29c67a30398638269fe600f73a054934', '111111', '0', '0', '127.0.0.1', '2019-12-24 12:55:40', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-24 12:55:39', '管理员');
 INSERT INTO `sys_user` VALUES ('2', '105', 'net', 'NumberOne', '00', 'ry@qq.com', '15666666666', '1', '', '8e6d98b90472783cc73c17047ddccf36', '222222', '0', '2', '127.0.0.1', '2019-12-22 13:16:20', 'admin', '2019-12-04 11:33:00', 'ry', '2019-12-04 11:33:00', '测试员');
 INSERT INTO `sys_user` VALUES ('100', '105', 'netw', 'netw', '00', '1214453855@qq.com', '15333333333', '0', '', 'f3b08c7e62236cd3a50eabc16e6083a6', 'd2a4ab', '0', '0', '127.0.0.1', '2019-12-22 13:34:50', 'admin', '2019-12-22 13:34:25', '', '2019-12-22 13:34:50', '');
 INSERT INTO `sys_user` VALUES ('101', '105', 'aa', 'aa', '00', '1214sad4d53855@qq.com', '15777777777', '0', '', 'a26147de5fd1d80189096390b43a5bd9', '8a9c9b', '0', '0', '', null, 'netw', '2019-12-22 13:36:25', '', null, '');
@@ -824,7 +812,7 @@ CREATE TABLE `sys_user_online` (
 -- ----------------------------
 -- Records of sys_user_online
 -- ----------------------------
-INSERT INTO `sys_user_online` VALUES ('f44f64e7-0b7a-48f1-b517-ba2ef4ea1fcc', 'netw', '测试部门', '127.0.0.1', '内网IP', 'Chrome', 'Windows 10', 'on_line', '2019-12-22 13:34:31', '2019-12-22 13:38:21', '1800000');
+INSERT INTO `sys_user_online` VALUES ('edcdaf84-f44d-4871-9871-201f99d2d470', 'admin', '研发部门', '127.0.0.1', '内网IP', 'Chrome', 'Windows 10', 'on_line', '2019-12-24 12:55:34', '2019-12-24 12:58:06', '1800000');
 
 -- ----------------------------
 -- Table structure for sys_user_post
